@@ -347,6 +347,7 @@ header .navbar ul li a:hover {
 /* about section starts */
 .about {
   background: rgb(255, 255, 255);
+  min-height: 80vh;
 }
 .about .row {
   display: flex;
@@ -460,11 +461,12 @@ header .navbar ul li a:hover {
 
 /* skills section starts */
 .skills {
-  min-height: 90vh;
+  min-height: 70vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
 }
 .skills h2 {
   color: #fff;
+  margin-bottom: 3rem;
 }
 .skills .heading span {
   color: rgb(255, 230, 0);
@@ -477,6 +479,7 @@ header .navbar ul li a:hover {
   width: 90%;
   margin: auto;
   margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 .skills .container .row {
   display: grid;
@@ -563,6 +566,7 @@ header .navbar ul li a:hover {
   overflow: hidden;
   transition: 0.3s;
   background: rgb(252, 252, 252);
+  align-items: center;
 }
 .education .box-container .box:hover {
   transform: scale(1.03);
@@ -642,11 +646,13 @@ header .navbar ul li a:hover {
 /* work section starts */
 .work {
   /* background: #010124; */
+  min-height: 70vh;
   background: linear-gradient(to bottom, #000031, #00002c);
 }
 .work h2 {
   color: #fff;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 .work .heading span {
   color: rgb(255, 230, 0);
@@ -762,6 +768,15 @@ header .navbar ul li a:hover {
 /* work section ends */
 
 /* experience section starts */
+.experience {
+  /* background: #ffffff; */
+  min-height: 80vh;
+}
+.experience h2 {
+  color: #000000;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
 .experience .timeline {
   position: relative;
   max-width: 1200px;
@@ -1126,6 +1141,7 @@ form .button-area {
   padding: 0.3rem 0;
   display: block;
 }
+
 .footer .box-container .box a:hover {
   color: #ffae00;
 }

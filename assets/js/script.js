@@ -38,21 +38,43 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+    // $("#contact-form").submit(function (event) {
+    //     emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+
+    //     emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+    //         .then(function (response) {
+    //             console.log('SUCCESS!', response.status, response.text);
+    //             document.getElementById("contact-form").reset();
+    //             alert("Form Submitted Successfully");
+    //         }, function (error) {
+    //             console.log('FAILED...', error);
+    //             document.getElementById("contact-form").reset();
+    //             alert("Form Submission Failed! Try Again");
+    //         });
+    //     event.preventDefault();
+    // });
+
+
+    (function() {
+    emailjs.init("qlDTX20bpgipWwtwU");  // ✅ Your public key
+})();
+
+// ✅ jQuery form submit
+$(document).ready(function() {
+    $("#contact-form").submit(function(event) {
+        event.preventDefault();  // ✅ Stop default form submission
 
         emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
+            .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
+                alert("Form Submitted Successfully ✅");
+            }, function(error) {
                 console.log('FAILED...', error);
-                document.getElementById("contact-form").reset();
-                alert("Form Submission Failed! Try Again");
+                alert("Form Submission Failed! ❌ Please Try Again");
             });
-        event.preventDefault();
     });
+});
     // <!-- emailjs to mail contact form data -->
 
 });
@@ -72,7 +94,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "Full Stack Web development in MERN", "web development"],
+    strings: ["frontend development", "backend development", "web designing", "MERN Stack Web development", "web development","Graphics Designer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
